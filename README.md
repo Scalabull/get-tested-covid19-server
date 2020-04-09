@@ -70,5 +70,5 @@ Backend for get-tested-covid19
 - Anyone picking up the story adds themselves as an owner and complete the next task: click `Finished`.
 - Once you create your PULL REQUEST click `Deliver` and drag your story to the top of the backlog list.
 - Acceptance
-  - When your story is `Accepted` merge it to master and delete the old branch.
+  - When your story is `Accepted` merge and delete the branch. Your code is now on staging.
   - If your story is `Declined` check the activity notes for the reasons, make changes and resubmit.
