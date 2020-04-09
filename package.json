@@ -1,0 +1,59 @@
+{
+  "name": "get-tested-covid19-server",
+  "version": "0.0.1",
+  "description": "Backend server for get-tested-covid19",
+  "main": "src/server/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.js' --write",
+    "start": "node src/server/index.js",
+    "start:dev": "npx env-cmd -f ./config/dev.env nodemon src/server/index.js",
+    "test": "jest",
+    "test:dev": "jest --watchAll",
+    "test:coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scalabull/get-tested-covid19-server.git"
+  },
+  "keywords": [
+    "get-tested-covid19",
+    "api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Scalabull/get-tested-covid19-server/issues"
+  },
+  "homepage": "https://github.com/Scalabull/get-tested-covid19-server#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.22.0",
+    "husky": "^4.2.3",
+    "jest": "^25.3.0",
+    "morgan": "^1.10.0",
+    "rimraf": "^3.0.2",
+    "socket.io": "^2.3.0",
+    "socket.io-mock": "^1.2.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier-format && npm run lint",
+      "pre-push": ""
+    }
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "env-cmd": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.0.4",
+    "supertest": "^4.0.2"
+  }
+}
